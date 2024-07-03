@@ -1,0 +1,315 @@
+.kiosk {
+    display: grid;
+    grid-template-columns: 260px 1660px;
+    grid-template-rows: 95vh 5vh;
+    width: 100%;
+    /* max-width: 1800px; */
+    margin: 0 auto;
+    /* padding: 0 10px; */
+    /* background-color: lightblue; */
+}
+
+/******************** header ********************/
+header {
+    width: 100%;
+    padding-left: 70px;  /* 왼쪽 마진 대체 */
+    border-right: 1px solid #4f4c4b;
+    /* background-color: lightcyan; */
+}
+
+.logo-mainmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-right: 70px;
+}
+
+.logo > h1 {
+    display: none;
+}
+
+.logo > img {
+    width: 100px;
+    margin: 0;
+    margin-top: 25px;
+    /* background-color: antiquewhite; */
+}
+
+.main-menu {
+    margin: 0;
+}
+
+.main-menu > .gnb {
+    width: 100%;
+    margin-top: 75px;
+    /* background-color: lightgreen; */
+}
+
+.main-menu > .gnb > li {
+    margin-bottom: 28px;
+}
+
+.main-menu > .gnb > li > a {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main-menu > .gnb > li > a:hover {
+    font-weight: 600;
+    color: #ba000d;
+}
+
+
+
+/******************** main ********************/
+main {
+    width: 100%;
+    /* background-color: lightgoldenrodyellow; */
+}
+
+
+/* ===== kiosk-content ===== */
+/* .kiosk-content {
+   
+} */
+
+.kiosk-content > .title {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.kiosk-content > .submenu-title-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+}
+.kiosk-content .sub-title {
+    margin-left: 10px;
+}
+.kiosk-content .sub-title > ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    /* background-color: lightblue; */
+}
+
+.kiosk-content .sub-title > ul > li {
+    width: 170px;
+    height: 55px;
+    line-height: 55px;
+    margin: 0;
+    /* padding-top: 23px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 1.167rem;
+    text-align: center;
+    /* background-color: #ba000d; */
+}
+
+.kiosk-content .sub-title > ul > .selected {
+    font-weight: 500;
+    color: #fff;
+    background-color: #ba000d;
+}
+
+
+/* ----- menu-content-box ----- */
+.kiosk-content .menu-content-box {
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+    width: 1640px;
+    height: 59vh;
+    padding: 0 70px; /* padding-right 부분 => 오른쪽 마진 대체 */
+    border-top-right-radius: 10px;
+    background-color: #ba000d;
+}
+
+.kiosk-content .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 0;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.kiosk-content .menu-list > img {
+    width: 170px;
+    font-weight: 500;
+}
+
+.kiosk-content .menu-list > .en-product-name {
+    margin-top: -5px;
+    color: #5a5a5a;
+}
+
+.kiosk-content .menu-list > .product-price {
+    margin-top: 5px;
+}
+ 
+
+/* ===== kiosk-order-info ===== */
+/* ----- order-info-content ----- */
+.kiosk-order-info {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    border-top: 1px solid #4f4c4b;
+    background-color: #fff;
+}
+
+.kiosk-order-info > .order-info-content {
+    width: 1200px;
+    height: 100%;
+    border-right: 1px solid #4f4c4b;
+}
+
+.kiosk-order-info .order-list {
+    display: flex;
+    align-items: center;
+    padding: 7px 38px;
+    border-bottom: 1px solid #ccc;
+    /* background-color: lightgreen; */
+}
+
+.kiosk-order-info .order-list > div {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.kiosk-order-info .order-list > .product {
+    margin-right: 705px;
+}
+
+.kiosk-order-info .order-list > .amount {
+    display: flex;
+    align-items: center;
+    width: 97px;
+    margin-right: 140px;
+}
+
+.kiosk-order-info .order-list > .amount > button {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #4f4c4b;
+}
+/* .kiosk-order-info .order-list .price {
+
+} */
+
+.kiosk-order-info .order-list > .cancel {
+    width: 18px;
+    height: 18px;
+    margin-left: 25px;
+    transform: translateY(2px);
+    /* background-color: bisque; */
+}
+
+.kiosk-order-info .order-list > .cancel > .x {
+    width: 100%;
+    height: 2px;
+    transform-origin: center;
+    background-color: #000;
+}
+
+.kiosk-order-info .order-list > .cancel > span:first-child {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.kiosk-order-info .order-list > .cancel > span:last-child {
+    transform: translateY(6px) rotate(-45deg);
+}
+
+/* ----- ttlcontent-button ----- */
+.kiosk-order-info > .ttlcontent-button {
+    width: 460px;
+    height: 100%;
+    padding: 20px 70px;  /* padding-right 부분 => 오른쪽 마진 대체 */
+    /* background-color: lightcyan; */
+}
+
+/* ----- ttlcontent-button > ttl-content ----- */
+/* .kiosk-order-info > .ttl-content {
+} */
+
+.kiosk-order-info .ttl-content > table {
+    width: 100%;
+}
+
+.kiosk-order-info .ttl-content > table td {
+    font-size: 1.167rem;
+}
+
+.kiosk-order-info .ttl-content > table .content-name {
+    font-weight: 600;
+}
+
+.kiosk-order-info .ttl-content > table .ttl {
+    text-align: right;
+}
+
+/* ----- ttlcontent-button > btn-box ----- */
+.kiosk-order-info .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    /* margin-top: 10px; */
+    /* background-color: antiquewhite; */
+}
+
+.kiosk-order-info .btn-box > button {
+    width: 150px;
+    height: 100%;
+    margin: 0;
+    margin-top: 10px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.167rem;
+    color: #fff;
+}
+
+.kiosk-order-info .btn-box > .cancel-btn {
+    background-color: #4f4c4b;
+}
+
+.kiosk-order-info .btn-box > .order-btn {
+    background-color: #ba000d;
+}
+
+/******************** footer ********************/
+footer {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    background-color: #ba000d;
+}
+
+.footerlogo-box {
+    display: flex;
+    align-items: center;
+}
+
+.footerlogo-box img {
+    width: 25px;
+    margin: 0;
+}
+
+.footerlogo-box .logo-txt {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 1.333rem;
+    color: #fff;
+}

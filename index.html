@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('./data/product.json')
+        .then(result => {
+            console.log('통신결과: ', result.data);
+            console.log(result.data[0].name);
+            // document.getElementById('name').innerText = result.data[0].name;
+            // document.getElementById('age').innerText = result.data[0].age;
+        })  
+        .catch(error => {
+            console.log('에러 발생 : ', error);
+        });
+
+    </script>
+    <title>HOLLYS KIOSK</title>
+</head>
+<body>
+    <div class="kiosk">
+        <header>
+            <div class="logo-mainmenu">
+                <div class="logo">
+                    <h1>할리스 키오스크</h1>
+                    <img src="./images/logo.gif" alt="hollys logo">
+                </div>
+
+                <nav class="main-menu">
+                    <ul class="gnb">
+                        <li class="new"><a href="">NEW</a></li>
+                        <li class="coffee"><a href="">COFFEE</a></li>
+                        <li class="beverage"><a href="">BEVERAGE</a></li>
+                        <li class="food"><a href="">FOOD</a></li>
+                        <li class="md"><a href="">MD</a></li>
+                    </ul>
+                </nav>
+            </div>  <!-- logo-mainmenu -->
+        </header>
+    
+    
+        <main>
+            <section class="kiosk-content">
+                <h2 class="title">COFFEE</h2>
+                
+                <div class="submenu-title-content" id="new-content">
+                    <div class="sub-title">
+                        <ul>
+                            <li id="sub-title-1" class="selected">에스프레소</li>
+                            <li id="sub-title-2">디카페인</li>
+                            <li id="sub-title-3">콜드브루</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-content-box">
+                        <div class="menu-list">
+                              <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                              <p class="product-name">블랙아리아 아메리카노</p>
+                              <p class="en-product-name">Black Aria Americano</p>
+                              <p class="product-price">4,500원</p>
+                        </div>
+
+                        <div class="menu-list">
+                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                            <p class="product-name">블랙아리아 아메리카노</p>
+                            <p class="en-product-name">Black Aria Americano</p>
+                            <p class="product-price">4,500원</p>
+                        </div>
+
+                        <div class="menu-list">
+                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                            <p class="product-name">블랙아리아 아메리카노</p>
+                            <p class="en-product-name">Black Aria Americano</p>
+                            <p class="product-price">4,500원</p>
+                        </div>
+
+                        <div class="menu-list">
+                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                            <p class="product-name">블랙아리아 아메리카노</p>
+                            <p class="en-product-name">Black Aria Americano</p>
+                            <p class="product-price">4,500원</p>
+                        </div>
+
+                        <div class="menu-list">
+                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                            <p class="product-name">블랙아리아 아메리카노</p>
+                            <p class="en-product-name">Black Aria Americano</p>
+                            <p class="product-price">4,500원</p>
+                        </div>
+
+                        <div class="menu-list">
+                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
+                            <p class="product-name">블랙아리아 아메리카노</p>
+                            <p class="en-product-name">Black Aria Americano</p>
+                            <p class="product-price">4,500원</p>
+                        </div>
+                    </div>
+                </div>  <!-- submenu-title-content -->
+            </section>  <!-- kiosk-content -->
+
+            <section class="kiosk-order-info">
+                <div class="order-info-content">
+                    <div class="order-list">
+                        <div class="product">아메리카노</div>
+                        <div class="amount">
+                            <button class="minus-btn">-</button>
+                            <p class="number">1</p>
+                            <button class="plus-btn">+</button>
+                        </div>
+                        <div class="price">4,500원</div>
+                        <div class="cancel">
+                            <span class="x"></span>
+                            <span class="x"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ttlcontent-button">
+                    <div class="ttl-content">
+                        <table>
+                            <tr>
+                                <td class="content-name">총 수량</td>
+                                <td class="ttl-amount ttl">1개</td>
+                            </tr>
+                            <tr>
+                                <td class="content-name">총 금액</td>
+                                <td class="ttl-price ttl">4,500원</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="btn-box">
+                        <button class="cancel-btn">취소</button>
+                        <button class="order-btn">주문하기</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer>
+            <div class="footerlogo-box">
+                <img src="./images/footer_logo.png" alt="footer logo">
+                <div class="logo-txt">HOLLYS</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
