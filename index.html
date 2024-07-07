@@ -7,18 +7,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <script script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="./js/product.js"></script> -->
+    <script src="./js/memo.js"></script>
     <script>
-        axios.get('./data/product.json')
-        .then(result => {
-            console.log('통신결과: ', result.data);
-            console.log(result.data[0].name);
-            // document.getElementById('name').innerText = result.data[0].name;
-            // document.getElementById('age').innerText = result.data[0].age;
-        })  
-        .catch(error => {
-            console.log('에러 발생 : ', error);
-        });
-
+        
     </script>
     <title>HOLLYS KIOSK</title>
 </head>
@@ -33,11 +25,11 @@
 
                 <nav class="main-menu">
                     <ul class="gnb">
-                        <li class="new"><a href="">NEW</a></li>
-                        <li class="coffee"><a href="">COFFEE</a></li>
-                        <li class="beverage"><a href="">BEVERAGE</a></li>
-                        <li class="food"><a href="">FOOD</a></li>
-                        <li class="md"><a href="">MD</a></li>
+                        <li class="new"><a href="#" data-type="new">NEW</a></li>
+                        <li class="coffee"><a href="#" data-type="coffee">COFFEE</a></li>
+                        <li class="beverage"><a href="#" data-type="beverage">BEVERAGE</a></li>
+                        <li class="food"><a href="#" data-type="food">FOOD</a></li>
+                        <li class="md"><a href="#" data-type="md">MD</a></li>
                     </ul>
                 </nav>
             </div>  <!-- logo-mainmenu -->
@@ -51,53 +43,18 @@
                 <div class="submenu-title-content" id="new-content">
                     <div class="sub-title">
                         <ul>
-                            <li id="sub-title-1" class="selected">에스프레소</li>
-                            <li id="sub-title-2">디카페인</li>
-                            <li id="sub-title-3">콜드브루</li>
+                            <li id="sub-title-1" class="selected"></li>
+                            <li id="sub-title-2"></li>
+                            <li id="sub-title-3"></li>
                         </ul>
                     </div>
 
-                    <div class="menu-content-box">
-                        <div class="menu-list">
-                              <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                              <p class="product-name">블랙아리아 아메리카노</p>
-                              <p class="en-product-name">Black Aria Americano</p>
-                              <p class="product-price">4,500원</p>
-                        </div>
-
-                        <div class="menu-list">
-                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                            <p class="product-name">블랙아리아 아메리카노</p>
-                            <p class="en-product-name">Black Aria Americano</p>
-                            <p class="product-price">4,500원</p>
-                        </div>
-
-                        <div class="menu-list">
-                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                            <p class="product-name">블랙아리아 아메리카노</p>
-                            <p class="en-product-name">Black Aria Americano</p>
-                            <p class="product-price">4,500원</p>
-                        </div>
-
-                        <div class="menu-list">
-                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                            <p class="product-name">블랙아리아 아메리카노</p>
-                            <p class="en-product-name">Black Aria Americano</p>
-                            <p class="product-price">4,500원</p>
-                        </div>
-
-                        <div class="menu-list">
-                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                            <p class="product-name">블랙아리아 아메리카노</p>
-                            <p class="en-product-name">Black Aria Americano</p>
-                            <p class="product-price">4,500원</p>
-                        </div>
-
-                        <div class="menu-list">
-                            <img src="./images/coffee/coffee_espresso_1.png" alt="블랙아리아 아메리카노">
-                            <p class="product-name">블랙아리아 아메리카노</p>
-                            <p class="en-product-name">Black Aria Americano</p>
-                            <p class="product-price">4,500원</p>
+                    <div class="menu-content-box" id="menu-content-box">
+                        <div class="menu-list hidden" id="menu-list">
+                              <img src="" alt="" class="product-image">
+                              <p class="product-name"></p>
+                              <p class="en-product-name"></p>
+                              <p class="product-price"></p>
                         </div>
                     </div>
                 </div>  <!-- submenu-title-content -->

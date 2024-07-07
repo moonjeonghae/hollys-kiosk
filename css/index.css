@@ -1,6 +1,6 @@
 .kiosk {
     display: grid;
-    grid-template-columns: 260px 1660px;
+    grid-template-columns: 13.5% 86.5%;  /* 260px 1660px */
     grid-template-rows: 95vh 5vh;
     width: 100%;
     /* max-width: 1800px; */
@@ -30,7 +30,7 @@ header {
 }
 
 .logo > img {
-    width: 100px;
+    width: 5.2vw;  /* 100px */
     margin: 0;
     margin-top: 25px;
     /* background-color: antiquewhite; */
@@ -42,7 +42,7 @@ header {
 
 .main-menu > .gnb {
     width: 100%;
-    margin-top: 75px;
+    margin-top: 10vh;
     /* background-color: lightgreen; */
 }
 
@@ -119,8 +119,10 @@ main {
 .kiosk-content .menu-content-box {
     display: flex;
     /* gap: 20px; */
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 1640px;
+    /* overflow-y: scroll; */
+    width: 98.5%;  /* 1640px */
     height: 59vh;
     padding: 0 70px; /* padding-right 부분 => 오른쪽 마진 대체 */
     border-top-right-radius: 10px;
@@ -131,16 +133,21 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 230px;
-    height: 230px;
+    width: 12vw;  /* 230px */
+    height: 12vw;  /* 230px */
     border-radius: 10px;
     margin: 0;
     margin-top: 20px;
+    text-align: center;
     background-color: #fff;
 }
 
+.kiosk-content .hidden {
+    display: none;
+}
+
 .kiosk-content .menu-list > img {
-    width: 170px;
+    width: 74%;  /* 170px */
     font-weight: 500;
 }
 
@@ -159,13 +166,13 @@ main {
 .kiosk-order-info {
     display: flex;
     width: 100%;
-    height: 20vh;
+    height: 21vh;
     border-top: 1px solid #4f4c4b;
     background-color: #fff;
 }
 
 .kiosk-order-info > .order-info-content {
-    width: 1200px;
+    width: 73%;  /* 1200px */
     height: 100%;
     border-right: 1px solid #4f4c4b;
 }
@@ -184,14 +191,17 @@ main {
 }
 
 .kiosk-order-info .order-list > .product {
-    margin-right: 705px;
+    margin-right: 58.75%;  /* 705px */
+    width: 11%;  /* 160px */
+    /* background-color: lightblue; */
 }
 
 .kiosk-order-info .order-list > .amount {
     display: flex;
     align-items: center;
-    width: 97px;
-    margin-right: 140px;
+    width: 10%;  /* 97px */
+    margin-right: 11%;  /* 140px */
+    /* background-color: lightblue; */
 }
 
 .kiosk-order-info .order-list > .amount > button {
@@ -202,9 +212,11 @@ main {
     color: #fff;
     background-color: #4f4c4b;
 }
-/* .kiosk-order-info .order-list .price {
 
-} */
+.kiosk-order-info .order-list .price {
+    width: 8%;
+    /* background-color: lightblue; */
+}
 
 .kiosk-order-info .order-list > .cancel {
     width: 18px;
@@ -216,7 +228,7 @@ main {
 
 .kiosk-order-info .order-list > .cancel > .x {
     width: 100%;
-    height: 2px;
+    height: 1px;
     transform-origin: center;
     background-color: #000;
 }
@@ -226,12 +238,12 @@ main {
 }
 
 .kiosk-order-info .order-list > .cancel > span:last-child {
-    transform: translateY(6px) rotate(-45deg);
+    transform: translateY(7px) rotate(-45deg);
 }
 
 /* ----- ttlcontent-button ----- */
 .kiosk-order-info > .ttlcontent-button {
-    width: 460px;
+    /* width: 23%; */
     height: 100%;
     padding: 20px 70px;  /* padding-right 부분 => 오른쪽 마진 대체 */
     /* background-color: lightcyan; */
@@ -262,8 +274,8 @@ main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 70px;
-    /* margin-top: 10px; */
+    height: 30%;
+    margin-top: 10px;
     /* background-color: antiquewhite; */
 }
 
@@ -271,7 +283,6 @@ main {
     width: 150px;
     height: 100%;
     margin: 0;
-    margin-top: 10px;
     border: none;
     border-radius: 15px;
     font-family: "Noto Sans KR", sans-serif;
@@ -281,7 +292,7 @@ main {
 }
 
 .kiosk-order-info .btn-box > .cancel-btn {
-    background-color: #4f4c4b;
+    background-color: hsl(15, 3%, 30%);
 }
 
 .kiosk-order-info .btn-box > .order-btn {
