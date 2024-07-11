@@ -53,9 +53,15 @@ header {
 .main-menu > .gnb > li > a {
     font-size: 1.5rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .main-menu > .gnb > li > a:hover {
+    font-weight: 600;
+    color: #ba000d;
+}
+
+.main-menu > .gnb > li > a.active {
     font-weight: 600;
     color: #ba000d;
 }
@@ -105,6 +111,7 @@ main {
     border-top-right-radius: 20px;
     font-size: 1.167rem;
     text-align: center;
+    cursor: pointer;
     /* background-color: #ba000d; */
 }
 
@@ -118,9 +125,9 @@ main {
 /* ----- menu-content-box ----- */
 .kiosk-content .menu-content-box {
     display: flex;
-    /* gap: 20px; */
+    gap: 22.5px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* overflow-y: scroll; */
     width: 98.5%;  /* 1640px */
     height: 59vh;
@@ -132,7 +139,7 @@ main {
 .kiosk-content .menu-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
     width: 12vw;  /* 230px */
     height: 12vw;  /* 230px */
     border-radius: 10px;
@@ -148,16 +155,11 @@ main {
 
 .kiosk-content .menu-list > img {
     width: 74%;  /* 170px */
-    font-weight: 500;
-}
-
-.kiosk-content .menu-list > .en-product-name {
-    margin-top: -5px;
-    color: #5a5a5a;
 }
 
 .kiosk-content .menu-list > .product-price {
-    margin-top: 5px;
+    margin-top: 20px;
+    font-weight: 500;
 }
  
 
@@ -274,7 +276,7 @@ main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 30%;
+    height: 40%;
     margin-top: 10px;
     /* background-color: antiquewhite; */
 }

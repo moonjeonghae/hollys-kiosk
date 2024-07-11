@@ -1,0 +1,287 @@
+{
+    "coffee" : {
+        "에스프레소" : [ 
+            {
+                "id": 0,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_1.png",
+                "name": "블랙아리아 아메리카노",
+                "price": "5,000"
+            },
+            {
+                "id": 1,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_2.png",
+                "name": "블랙아리아 딥라떼",
+                "price": "5,800"
+            },
+            {
+                "id": 2,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_3.png",
+                "name": "아메리카노",
+                "price": "4,500"
+            },
+            {
+                "id": 3,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_4.png",
+                "name": "카페 라떼",
+                "price": "5,200"
+            },
+            {
+                "id": 4,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_5.png",
+                "name": "바닐라 딜라이트",
+                "price": "6,200"
+            },
+            {
+                "id": 5,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_6.png",
+                "name": "돌체 라떼",
+                "price": "6,200"
+            },
+            {
+                "id": 6,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_7.png",
+                "name": "카라멜 마키아또",
+                "price": "6,200"
+            },
+            {
+                "id": 7,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_8.png",
+                "name": "카페모카",
+                "price": "5,800"
+            },
+            {
+                "id": 8,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_9.png",
+                "name": "카푸치노",
+                "price": "5,200"
+            },
+            {
+                "id": 9,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_10.png",
+                "name": "아포가토",
+                "price": "6,200"
+            },
+            {
+                "id": 10,
+                "type": "에스프레소",
+                "img": "coffee/coffee_espresso_11.png",
+                "name": "에스프레소",
+                "price": "4,000"
+            }
+        ],
+        "디카페인" : [
+            {
+                "id": 11,
+                "type": "디카페인",
+                "img": "coffee/coffee_decaf_1.png",
+                "name": "디카페인 아메리카노",
+                "price": "4,900"
+            },
+            {
+                "id": 12,
+                "type": "디카페인",
+                "img": "coffee/coffee_decaf_2.png",
+                "name": "디카페인 카페 라떼",
+                "price": "5,600"
+            },
+            {
+                "id": 13,
+                "type": "디카페인",
+                "img": "coffee/coffee_decaf_3.png",
+                "name": "디카페인 바닐라 딜라이트",
+                "price": "6,600"
+            }
+        ],
+        "콜드브루" : [
+            {
+                "id": 14,
+                "type": "콜드브루",
+                "img": "coffee/coffee_coldbrew_1.png",
+                "name": "콜드브루",
+                "price": "5,100"
+            },
+            {
+                "id": 15,
+                "type": "콜드브루",
+                "img": "coffee/coffee_coldbrew_2.png",
+                "name": "콜드브루 라떼",
+                "price": "5,700"
+            },
+            {
+                "id": 16,
+                "type": "콜드브루",
+                "img": "coffee/coffee_coldbrew_3.png",
+                "name": "콜드브루 딜라이트",
+                "price": "6,500"
+            }
+        ]
+    },
+    "beverage" : {
+        "빙수" : [
+            {
+                "id": 17,
+                "type": "빙수",
+                "img": "beverage/beverage_bingsu_1.png",
+                "name": "봉주르 딸기 치즈 빙수",
+                "price": "15,800"
+            },
+            {
+                "id": 18,
+                "type": "빙수",
+                "img": "beverage/beverage_bingsu_2.png",
+                "name": "애플망고 치즈 빙수",
+                "price": "15,800"
+            },
+            {
+                "id": 19,
+                "type": "빙수",
+                "img": "beverage/beverage_bingsu_3.png",
+                "name": "눈꽃 팥빙수",
+                "price": "14,800"
+            },
+            {
+                "id": 20,
+                "type": "빙수",
+                "img": "beverage/beverage_bingsu_4.png",
+                "name": "애플망고 치즈 빙수 (1인)",
+                "price": "9,000"
+            },
+            {
+                "id": 21,
+                "type": "빙수",
+                "img": "beverage/beverage_bingsu_5.png",
+                "name": "눈꽃 팥빙수 (1인)",
+                "price": "8,500"
+            }
+        ],
+        "할리치노": [
+            {
+                "id": 22,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_1.png",
+                "name": "제주 말차 할리치노",
+                "price": "6,400"
+            },
+            {
+                "id": 23,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_2.png",
+                "name": "딸기 치즈케익 할리치노",
+                "price": "6,400"
+            },
+            {
+                "id": 24,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_3.png",
+                "name": "플레인 요거트 할리치노",
+                "price": "6,400"
+            },
+            {
+                "id": 25,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_4.png",
+                "name": "다크 초코칩 할리치노",
+                "price": "6,400"
+            },
+            {
+                "id": 26,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_5.png",
+                "name": "민트 초코칩 할리치노",
+                "price": "6,400"
+            },
+            {
+                "id": 27,
+                "type": "할리치노",
+                "img": "beverage/beverage_hollyccino_6.png",
+                "name": "콜드브루 할리치노",
+                "price": "6,400"
+            }
+        ],
+        "스무디/주스": [
+            {
+                "id": 28,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_Smoothie_1.png",
+                "name": "피치 딸기 크러쉬",
+                "price": "5,900"
+            },
+            {
+                "id": 29,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_Smoothie_2.png",
+                "name": "애플망고 스무디",
+                "price": "6,300"
+            },
+            {
+                "id": 30,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_Smoothie_3.png",
+                "name": "딸기 스무디",
+                "price": "6,300"
+            },
+            {
+                "id": 31,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_1.png",
+                "name": "리얼 수박 생과일 주스",
+                "price": "6,900"
+            },
+            {
+                "id": 32,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_2.png",
+                "name": "오렌지 자몽 싱싱 주스",
+                "price": "6,600"
+            },
+            {
+                "id": 33,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_3.png",
+                "name": "토마토 통통 주스",
+                "price": "6,600"
+            },
+            {
+                "id": 34,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_4.png",
+                "name": "사과 비트 착즙 주스",
+                "price": "5,800"
+            },
+            {
+                "id": 35,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_5.png",
+                "name": "오렌지 당근 착즙 주스",
+                "price": "5,800"
+            },
+            {
+                "id": 36,
+                "type": "스무디/주스",
+                "img": "beverage/beverage_juice_6.png",
+                "name": "청포도 케일 착즙 주스",
+                "price": "5,800"
+            }
+        ],
+        "라떼/초콜릿": [
+            {
+
+            }
+        ],
+        "티/스파클링": [
+            {
+
+            }
+        ]
+    }
+}

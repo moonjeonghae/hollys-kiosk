@@ -1,23 +1,31 @@
-axios.get('./data/product.json')
+window.onload = function() {
+    const menuContentBox = document.querySelector('.menu-content-box');
+    const menuList = document.querySelector('.menu-list');
+    const subTitle1 = document.getElementById('sub-title-1');
+    const subTitle2 = document.getElementById('sub-title-2');    
+    let products = [];
+
+    axios.get('./data/product.json')
         .then (result => {
             console.log('통신결과: ', result.data);
             console.log(result.data[0].name);
-            const products = result.data;
+            products = result.data;
 
-            // 메뉴 타입에 따라 분류
-            const groupedByType = {};
-            products.forEach(product => {
-                if (!groupedByType[product.type]) {
-                    groupedByType[product.type] = [];
-                }
-                groupedByType[product.type].push(product);
-            });
-
-
-            const menuContentBox = document.querySelector('.menu-content-box');
-            const menuList = document.querySelector('.menu-list');
+            subTitle1.addEventListener('click', () => displayProducts('에스프레소'));
+            subTitle2.addEventListener('click', () => displayProducts('디카페인'));
             
-            result.data.forEach((product) => {
+            displayProducts('에스프레소');
+        })   
+        .catch(error => {
+            console.log('에러 발생 : ', error);
+        });
+
+        function displayProducts(type) {
+            menuContentBox.innerHTML = '';
+
+            const filterProducts = products.filter(product => product.type === type);
+
+            filterProducts.forEach(product => {
                 const menuListClone = menuList.cloneNode(true);
                 menuListClone.style.display = 'block';
                 const productImage = menuListClone.querySelector('.product-image');
@@ -29,7 +37,6 @@ axios.get('./data/product.json')
 
                 menuContentBox.appendChild(menuListClone);
             });
-        })  
-        .catch(error => {
-            console.log('에러 발생 : ', error);
-        });
+        }
+        
+}
