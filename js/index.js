@@ -32,7 +32,7 @@ window.onload = function() {
 
 
 
-
+    // ***** subtitle & 해당 메뉴 *****
     axios.get('./data/test.json')
     .then(result => {
         const menuData = result.data;
@@ -107,6 +107,26 @@ window.onload = function() {
 
                 menuContentBox.appendChild(menuListClone);
             });
+
+            
+        // ***** 메뉴 클릭 시 선택 목록에 나타나게 하기 ***** 
+            const menuLists = document.querySelectorAll('.menu-list');
+            const orderList = document.querySelector('.order-list');
+            menuLists.forEach(list => {
+                list.addEventListener('click', () => AddorderLIst(menuProducts));
+            });
+
+            function AddorderLIst(events) {
+                orderList.innerHTML = '';
+
+                events.forEach(e => {
+                    const orderListClone = orderList.cloneNode(true);
+                    orderListClone.style.display = 'block';
+                    orderListClone.querySelector('.product').innerText = e.name;
+                    orderListClone.querySelector('.price').innerText = e.price + '원';
+                })
+            } 
+
         }
         // 초기 값 : coffee로 설정
         showSubMenu('coffee');
@@ -114,4 +134,5 @@ window.onload = function() {
     .catch(error => {
         console.log('통신 에러 : ' + error);
     });
+
  }

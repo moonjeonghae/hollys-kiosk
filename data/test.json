@@ -208,79 +208,775 @@
                 "price": "6,400"
             }
         ],
-        "스무디/주스": [
+        "주스/스무디": [
             {
                 "id": 28,
-                "type": "스무디/주스",
-                "img": "beverage/beverage_Smoothie_1.png",
-                "name": "피치 딸기 크러쉬",
-                "price": "5,900"
-            },
-            {
-                "id": 29,
-                "type": "스무디/주스",
-                "img": "beverage/beverage_Smoothie_2.png",
-                "name": "애플망고 스무디",
-                "price": "6,300"
-            },
-            {
-                "id": 30,
-                "type": "스무디/주스",
-                "img": "beverage/beverage_Smoothie_3.png",
-                "name": "딸기 스무디",
-                "price": "6,300"
-            },
-            {
-                "id": 31,
-                "type": "스무디/주스",
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_1.png",
                 "name": "리얼 수박 생과일 주스",
                 "price": "6,900"
             },
             {
-                "id": 32,
-                "type": "스무디/주스",
+                "id": 29,
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_2.png",
                 "name": "오렌지 자몽 싱싱 주스",
                 "price": "6,600"
             },
             {
-                "id": 33,
-                "type": "스무디/주스",
+                "id": 30,
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_3.png",
                 "name": "토마토 통통 주스",
                 "price": "6,600"
             },
             {
-                "id": 34,
-                "type": "스무디/주스",
+                "id": 31,
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_4.png",
                 "name": "사과 비트 착즙 주스",
                 "price": "5,800"
             },
             {
-                "id": 35,
-                "type": "스무디/주스",
+                "id": 32,
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_5.png",
                 "name": "오렌지 당근 착즙 주스",
                 "price": "5,800"
             },
             {
-                "id": 36,
-                "type": "스무디/주스",
+                "id": 33,
+                "type": "주스/스무디",
                 "img": "beverage/beverage_juice_6.png",
                 "name": "청포도 케일 착즙 주스",
                 "price": "5,800"
+            },
+            {
+                "id": 34,
+                "type": "주스/스무디",
+                "img": "beverage/beverage_Smoothie_1.png",
+                "name": "피치 딸기 크러쉬",
+                "price": "5,900"
+            },
+            {
+                "id": 35,
+                "type": "주스/스무디",
+                "img": "beverage/beverage_Smoothie_2.png",
+                "name": "애플망고 스무디",
+                "price": "6,300"
+            },
+            {
+                "id": 36,
+                "type": "주스/스무디",
+                "img": "beverage/beverage_Smoothie_3.png",
+                "name": "딸기 스무디",
+                "price": "6,300"
             }
         ],
         "라떼/초콜릿": [
             {
-
+                "id": 37,
+                "type": "라떼/초콜릿",
+                "img": "beverage/beverage_latte_1.png",
+                "name": "로얄 밀크티 라떼",
+                "price": "6,000"
+            },
+            {
+                "id": 38,
+                "type": "라떼/초콜릿",
+                "img": "beverage/beverage_latte_2.png",
+                "name": "제주 말차 라떼",
+                "price": "6,000"
+            },
+            {
+                "id": 39,
+                "type": "라떼/초콜릿",
+                "img": "beverage/beverage_choco_1.png",
+                "name": "민트 초코",
+                "price": "5,900"
+            },
+            {
+                "id": 40,
+                "type": "라떼/초콜릿",
+                "img": "beverage/beverage_choco_2.png",
+                "name": "핫/아이스 초코",
+                "price": "5,700"
+            },
+            {
+                "id": 41,
+                "type": "라떼/초콜릿",
+                "img": "beverage/beverage_choco_3.png",
+                "name": "화이트 초코",
+                "price": "5,700"
             }
         ],
-        "티/스파클링": [
+        "티": [
             {
-
+                "id": 42,
+                "type": "티",
+                "img": "beverage/beverage_tea_1.png",
+                "name": "자몽 하이볼 논알콜",
+                "price": "6,000"
+            },
+            {
+                "id": 43,
+                "type": "티",
+                "img": "beverage/beverage_tea_2.png",
+                "name": "로얄 밀크 버블티",
+                "price": "6,000"
+            },
+            {
+                "id": 44,
+                "type": "티",
+                "img": "beverage/beverage_tea_3.png",
+                "name": "흑당 버블티",
+                "price": "5,900"
+            },
+            {
+                "id": 45,
+                "type": "티",
+                "img": "beverage/beverage_tea_4.png",
+                "name": "핑크 파인 캐모마일티",
+                "price": "5,500"
+            },
+            {
+                "id": 46,
+                "type": "티",
+                "img": "beverage/beverage_tea_5.png",
+                "name": "제주 레몬 애플티",
+                "price": "5,800"
+            },
+            {
+                "id": 47,
+                "type": "티",
+                "img": "beverage/beverage_tea_6.png",
+                "name": "유자 캐모마일",
+                "price": "5,500"
+            },
+            {
+                "id": 48,
+                "type": "티",
+                "img": "beverage/beverage_tea_7.png",
+                "name": "복숭아 얼그레이",
+                "price": "5,500"
+            },
+            {
+                "id": 49,
+                "type": "티",
+                "img": "beverage/beverage_tea_8.png",
+                "name": "캐모마일",
+                "price": "4,700"
+            },
+            {
+                "id": 50,
+                "type": "티",
+                "img": "beverage/beverage_tea_9.png",
+                "name": "얼그레이",
+                "price": "4,700"
+            },
+            {
+                "id": 51,
+                "type": "티",
+                "img": "beverage/beverage_tea_10.png",
+                "name": "페퍼민트",
+                "price": "4,700"
+            },
+            {
+                "id": 52,
+                "type": "티",
+                "img": "beverage/beverage_tea_11.png",
+                "name": "홍자몽차",
+                "price": "5,300"
+            },
+            {
+                "id": 53,
+                "type": "티",
+                "img": "beverage/beverage_tea_12.png",
+                "name": "제주 한라봉 감귤차",
+                "price": "4,900"
+            },
+            {
+                "id": 54,
+                "type": "티",
+                "img": "beverage/beverage_tea_13.png",
+                "name": "고흥 유자차",
+                "price": "4,900"
+            },
+            {
+                "id": 55,
+                "type": "티",
+                "img": "beverage/beverage_tea_14.png",
+                "name": "해남 녹차",
+                "price": "4,700"
+            },
+            {
+                "id": 56,
+                "type": "티",
+                "img": "beverage/beverage_tea_15.png",
+                "name": "레몬 생강차",
+                "price": "5,500"
+            },
+            {
+                "id": 57,
+                "type": "티",
+                "img": "beverage/beverage_tea_16.png",
+                "name": "대추 생강차",
+                "price": "5,500"
+            }
+        ],
+        "스파클링": [
+            {
+                "id": 58,
+                "type": "스파클링",
+                "img": "beverage/beverage_sparkling_1.png",
+                "name": "유자몽 스파클링",
+                "price": "5,800"
+            },
+            {
+                "id": 59,
+                "type": "스파클링",
+                "img": "beverage/beverage_sparkling_2.png",
+                "name": "복숭아 자두 스파클링",
+                "price": "5,800"
+            },
+            {
+                "id": 60,
+                "type": "스파클링",
+                "img": "beverage/beverage_sparkling_3.png",
+                "name": "청포도 스파클링",
+                "price": "5,800"
+            }
+        ]
+    },
+    "food" : {
+        "케이크" : [
+            {
+                "id": 61,
+                "type": "케이크",
+                "img": "food/food_cake_1.png",
+                "name": "딸기 치즈케익 쏘스윗박스",
+                "price": "6,500"
+            },
+            {
+                "id": 62,
+                "type": "케이크",
+                "img": "food/food_cake_2.png",
+                "name": "상큼한 복숭아 생크림",
+                "price": "6,300"
+            },
+            {
+                "id": 63,
+                "type": "케이크",
+                "img": "food/food_cake_3.png",
+                "name": "블루베리 치즈 케이크",
+                "price": "6,300"
+            },
+            {
+                "id": 64,
+                "type": "케이크",
+                "img": "food/food_cake_4.png",
+                "name": "트리플 베리 요거트",
+                "price": "6,300"
+            },
+            {
+                "id": 65,
+                "type": "케이크",
+                "img": "food/food_cake_5.png",
+                "name": "트리플 초코 케이크",
+                "price": "6,200"
+            },
+            {
+                "id": 66,
+                "type": "케이크",
+                "img": "food/food_cake_6.png",
+                "name": "티라미수 쏘스윗박스",
+                "price": "6,500"
+            },
+            {
+                "id": 67,
+                "type": "케이크",
+                "img": "food/food_cake_7.png",
+                "name": "쿠키앤크림 쏘스윗박스",
+                "price": "6,500"
+            },
+            {
+                "id": 68,
+                "type": "케이크",
+                "img": "food/food_cake_8.png",
+                "name": "뉴욕 치즈 케이크",
+                "price": "6,000"
+            },
+            {
+                "id": 69,
+                "type": "케이크",
+                "img": "food/food_cake_9.png",
+                "name": "티아라 딸기 생크림",
+                "price": "37,000"
+            },
+            {
+                "id": 70,
+                "type": "케이크",
+                "img": "food/food_cake_10.png",
+                "name": "할리베어 초코홀링 케이크",
+                "price": "39,000"
+            },
+            {
+                "id": 71,
+                "type": "케이크",
+                "img": "food/food_cake_11.png",
+                "name": "티라미수 쏘스윗박스 파티팩",
+                "price": "34,000"
+            },
+            {
+                "id": 72,
+                "type": "케이크",
+                "img": "food/food_cake_12.png",
+                "name": "쿠키앤크림 쏘스윗박스 파티팩",
+                "price": "34,000"
+            }
+        ],
+        "베이커리" : [
+            {
+                "id": 73,
+                "type": "베이커리",
+                "img": "food/food_bakery_1.png",
+                "name": "봉주르 크림 브륄레",
+                "price": "3,300"
+            },
+            {
+                "id": 74,
+                "type": "베이커리",
+                "img": "food/food_bakery_2.png",
+                "name": "아이스크림 크로플",
+                "price": "6,500"
+            },
+            {
+                "id": 75,
+                "type": "베이커리",
+                "img": "food/food_bakery_3.png",
+                "name": "허니바게트볼",
+                "price": "6,300"
+            },
+            {
+                "id": 76,
+                "type": "베이커리",
+                "img": "food/food_bakery_4.png",
+                "name": "베이컨 포테이토 데니쉬",
+                "price": "4,500"
+            },
+            {
+                "id": 77,
+                "type": "베이커리",
+                "img": "food/food_bakery_5.png",
+                "name": "콘치즈 데니쉬",
+                "price": "4,500"
+            },
+            {
+                "id": 78,
+                "type": "베이커리",
+                "img": "food/food_bakery_6.png",
+                "name": "AOP 버터 크루아",
+                "price": "4,200"
+            },
+            {
+                "id": 79,
+                "type": "베이커리",
+                "img": "food/food_bakery_7.png",
+                "name": "클래식 버터 스콘 & 딸기잼",
+                "price": "3,800"
+            },
+            {
+                "id": 80,
+                "type": "베이커리",
+                "img": "food/food_bakery_8.png",
+                "name": "초코칩 콕콕 스콘",
+                "price": "3,800"
+            },
+            {
+                "id": 81,
+                "type": "베이커리",
+                "img": "food/food_bakery_9.png",
+                "name": "플레인 베이글 & 크림치즈",
+                "price": "3,500"
+            },
+            {
+                "id": 82,
+                "type": "베이커리",
+                "img": "food/food_bakery_10.png",
+                "name": "블루베리 베이글 & 크림치즈",
+                "price": "3,500"
+            },
+            {
+                "id": 83,
+                "type": "베이커리",
+                "img": "food/food_bakery_11.png",
+                "name": "레몬 글라세 마들렌",
+                "price": "3,200"
+            },
+            {
+                "id": 84,
+                "type": "베이커리",
+                "img": "food/food_bakery_12.png",
+                "name": "바닐라 딜라이트 뚱카롱",
+                "price": "2,900"
+            },
+            {
+                "id": 85,
+                "type": "베이커리",
+                "img": "food/food_bakery_13.png",
+                "name": "딸기 치즈케익 뚱카롱",
+                "price": "2,900"
+            },
+            {
+                "id": 86,
+                "type": "베이커리",
+                "img": "food/food_bakery_14.png",
+                "name": "더블 초코 뚱카롱",
+                "price": "2,900"
+            },
+            {
+                "id": 87,
+                "type": "베이커리",
+                "img": "food/food_bakery_15.png",
+                "name": "클래식 휘낭시에",
+                "price": "2,500"
+            },
+            {
+                "id": 88,
+                "type": "베이커리",
+                "img": "food/food_bakery_16.png",
+                "name": "초콜릿 휘낭시에",
+                "price": "2,500"
+            }
+        ],
+        "델리" : [
+            {
+                "id": 89,
+                "type": "델리",
+                "img": "food/food_deli_1.jpg",
+                "name": "치즈 에그 브리오슈",
+                "price": "4,500"
+            },
+            {
+                "id": 90,
+                "type": "델리",
+                "img": "food/food_deli_2.png",
+                "name": "트러플 머쉬룸 수프볼",
+                "price": "6,000"
+            },
+            {
+                "id": 91,
+                "type": "델리",
+                "img": "food/food_deli_3.png",
+                "name": "페스토 햄 모짜렐라",
+                "price": "6,500"
+            },
+            {
+                "id": 92,
+                "type": "델리",
+                "img": "food/food_deli_4.png",
+                "name": "올리브 베이컨 치아바타",
+                "price": "6,500"
+            },
+            {
+                "id": 93,
+                "type": "델리",
+                "img": "food/food_deli_5.png",
+                "name": "더블 햄치즈 크루아상",
+                "price": "6,000"
+            },
+            {
+                "id": 94,
+                "type": "델리",
+                "img": "food/food_deli_6.png",
+                "name": "B.E.L.T 호밀 샌드위치",
+                "price": "6,000"
+            },
+            {
+                "id": 95,
+                "type": "델리",
+                "img": "food/food_deli_7.png",
+                "name": "바삭 불고기 & 트리플 치즈 치킨 퀘사디아",
+                "price": "6,000"
+            },
+            {
+                "id": 96,
+                "type": "델리",
+                "img": "food/food_deli_8.png",
+                "name": "자이언트 페퍼로니 프레즐",
+                "price": "4,900"
+            },
+            {
+                "id": 97,
+                "type": "델리",
+                "img": "food/food_deli_9.png",
+                "name": "콰트로 치즈 프레즐",
+                "price": "4,900"
+            },
+            {
+                "id": 98,
+                "type": "델리",
+                "img": "food/food_deli_10.png",
+                "name": "햄치즈 스크램블 토스트",
+                "price": "4,900"
+            },
+            {
+                "id": 99,
+                "type": "델리",
+                "img": "food/food_deli_11.png",
+                "name": "에그마요",
+                "price": "4,900"
+            },
+            {
+                "id": 100,
+                "type": "델리",
+                "img": "food/food_deli_12.png",
+                "name": "크로크무슈",
+                "price": "4,500"
+            },
+            {
+                "id": 101,
+                "type": "델리",
+                "img": "food/food_deli_13.png",
+                "name": "수플레 오믈렛 라이스",
+                "price": "7,200"
+            },
+            {
+                "id": 102,
+                "type": "델리",
+                "img": "food/food_deli_14.png",
+                "name": "스파이시 씨푸드 리조또",
+                "price": "6,900"
+            },
+            {
+                "id": 103,
+                "type": "델리",
+                "img": "food/food_deli_15.png",
+                "name": "치킨 크림 리조또",
+                "price": "6,900"
+            }
+        ]
+    },
+    "md" : {
+        "식품MD" : [
+            {
+                "id": 104,
+                "type": "식품MD",
+                "img": "md/md1_1.png",
+                "name": "(캡슐) 시그니처 블렌드 10개입",
+                "price": "8,100"
+            },
+            {
+                "id": 105,
+                "type": "식품MD",
+                "img": "md/md1_2.png",
+                "name": "(캡슐) 이클립스 블렌드 10개입",
+                "price": "8,100"
+            },
+            {
+                "id": 106,
+                "type": "식품MD",
+                "img": "md/md1_3.png",
+                "name": "(캡슐) 디카페인 블렌드 10개입",
+                "price": "8,100"
+            },
+            {
+                "id": 107,
+                "type": "식품MD",
+                "img": "md/md1_4.png",
+                "name": "(캡슐) 블랙아리아 블렌드 10개입",
+                "price": "8,100"
+            },
+            {
+                "id": 108,
+                "type": "식품MD",
+                "img": "md/md1_5.png",
+                "name": "시그니처 아메리카노 미니 10T",
+                "price": "3,900"
+            },
+            {
+                "id": 109,
+                "type": "식품MD",
+                "img": "md/md1_6.png",
+                "name": "헤이즐넛 아메리카노 12T",
+                "price": "5,400"
+            },
+            {
+                "id": 110,
+                "type": "식품MD",
+                "img": "md/md1_7.png",
+                "name": "카페 라떼 10T",
+                "price": "5,900"
+            },
+            {
+                "id": 111,
+                "type": "식품MD",
+                "img": "md/md1_8.png",
+                "name": "바닐라 딜라이트 10T",
+                "price": "7,900"
+            },
+            {
+                "id": 112,
+                "type": "식품MD",
+                "img": "md/md1_9.png",
+                "name": "디카페인 바닐라 딜라이트 10T",
+                "price": "7,900"
+            },
+            {
+                "id": 113,
+                "type": "식품MD",
+                "img": "md/md1_10.png",
+                "name": "돌체 라떼 10T",
+                "price": "6,900"
+            },
+            {
+                "id": 114,
+                "type": "식품MD",
+                "img": "md/md1_11.png",
+                "name": "시그니처 드립백",
+                "price": "6,900"
+            },
+            {
+                "id": 115,
+                "type": "식품MD",
+                "img": "md/md1_12.png",
+                "name": "데이드림 드립백",
+                "price": "7,900"
+            },
+            {
+                "id": 116,
+                "type": "식품MD",
+                "img": "md/md1_13.png",
+                "name": "이클립스 드립백",
+                "price": "7,900"
+            },
+            {
+                "id": 117,
+                "type": "식품MD",
+                "img": "md/md1_14.png",
+                "name": "콤부차 샤인머스캣 20T",
+                "price": "14,900"
+            },
+            {
+                "id": 118,
+                "type": "식품MD",
+                "img": "md/md1_15.png",
+                "name": "콤부차 피치딸기 20T",
+                "price": "14,900"
+            }
+        ],
+        "상품MD" : [
+            {
+                "id": 119,
+                "type": "상품MD",
+                "img": "md/md2_1.png",
+                "name": "스포티 텀블러 (레드)",
+                "price": "14,000"
+            },
+            {
+                "id": 120,
+                "type": "상품MD",
+                "img": "md/md2_2.png",
+                "name": "스포티 텀블러 (아이보리)",
+                "price": "14,000"
+            },
+            {
+                "id": 121,
+                "type": "상품MD",
+                "img": "md/md2_3.png",
+                "name": "봉주르 파리 비치백",
+                "price": "11,000"
+            },
+            {
+                "id": 122,
+                "type": "상품MD",
+                "img": "md/md2_4.png",
+                "name": "봉주르 파리 우산",
+                "price": "13,000"
+            },
+            {
+                "id": 123,
+                "type": "상품MD",
+                "img": "md/md2_5.png",
+                "name": "봉주르 파리 콜드컵(하트)",
+                "price": "10,000"
+            },
+            {
+                "id": 124,
+                "type": "상품MD",
+                "img": "md/md2_6.png",
+                "name": "봉주르 파리 콜드컵(에펠탑)",
+                "price": "10,000"
+            },
+            {
+                "id": 125,
+                "type": "상품MD",
+                "img": "md/md2_7.png",
+                "name": "봉주르 파리 머그",
+                "price": "11,000"
+            },
+            {
+                "id": 126,
+                "type": "상품MD",
+                "img": "md/md2_8.png",
+                "name": "봉주르  파리 미니저그(크림)",
+                "price": "19,000"
+            },
+            {
+                "id": 127,
+                "type": "상품MD",
+                "img": "md/md2_9.png",
+                "name": "봉주르  파리 미니저그(블루)",
+                "price": "19,000"
+            },
+            {
+                "id": 128,
+                "type": "상품MD",
+                "img": "md/md2_10.png",
+                "name": "드라이빙 텀블러(로고 블랙)",
+                "price": "32,000"
+            },
+            {
+                "id": 129,
+                "type": "상품MD",
+                "img": "md/md2_11.png",
+                "name": "드라이빙 텀블러(로고 핑크)",
+                "price": "32,000"
+            },
+            {
+                "id": 130,
+                "type": "상품MD",
+                "img": "md/md2_12.png",
+                "name": "드라이빙 텀블러(로고 화이트)",
+                "price": "32,000"
+            },
+            {
+                "id": 131,
+                "type": "상품MD",
+                "img": "md/md2_13.png",
+                "name": "라운드 머그(레드)",
+                "price": "11,000"
+            },
+            {
+                "id": 132,
+                "type": "상품MD",
+                "img": "md/md2_14.png",
+                "name": "라운드 머그(테라조크림)",
+                "price": "11,000"
+            },
+            {
+                "id": 133,
+                "type": "상품MD",
+                "img": "md/md2_15.png",
+                "name": "뉴 시그니처 머그(레드)",
+                "price": "9,000"
+            },
+            {
+                "id": 134,
+                "type": "상품MD",
+                "img": "md/md2_16.png",
+                "name": "뉴 시그니처 머그(화이트)",
+                "price": "9,000"
             }
         ]
     }
