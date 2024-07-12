@@ -84,8 +84,7 @@ window.onload = function() {
                 });
                 
                 const menuProducts = menuData[type][typeName];
-
-                // # 첫 번째 서브타이틀에 css 적용
+                  // # 첫 번째 서브타이틀에 css 적용
                 if (idx === 0) {
                     li.classList.add('selected');
                     displayProducts(menuProducts);
@@ -106,28 +105,114 @@ window.onload = function() {
                 menuListClone.querySelector('.product-price').innerText = product.price + '원';
 
                 menuContentBox.appendChild(menuListClone);
+
+                menuListClone.addEventListener('click', () => {
+                    addToOrderList(product);  // 선택 목록 추가 함수 호출
+                });  
             });
 
+            // ***** 메뉴 클릭 시 선택 목록에 나타나게 하기 ***** 
+            function addToOrderList(product) {
+                const orderList = document.querySelector('.order-list');
+                const orderInfoContent = document.querySelector('.order-info-content');
+                const productPrice = parseInt(product.price.replace(/,/g, ''));
+                const orderListClone = orderList.cloneNode(true);
             
-        // ***** 메뉴 클릭 시 선택 목록에 나타나게 하기 ***** 
-            const menuLists = document.querySelectorAll('.menu-list');
-            const orderList = document.querySelector('.order-list');
-            menuLists.forEach(list => {
-                list.addEventListener('click', () => AddorderLIst(menuProducts));
-            });
-
-            function AddorderLIst(events) {
-                orderList.innerHTML = '';
-
-                events.forEach(e => {
-                    const orderListClone = orderList.cloneNode(true);
+                // ***** 동일한 메뉴 클릭하면 수량 증가 시키기 *****
+                    // 새로운 메뉴 추가
                     orderListClone.style.display = 'block';
-                    orderListClone.querySelector('.product').innerText = e.name;
-                    orderListClone.querySelector('.price').innerText = e.price + '원';
-                })
-            } 
-
+                    orderListClone.style.display = 'flex';
+                    orderListClone.querySelector('.order-list .product').innerText = product.name;
+                    orderListClone.querySelector('.order-list .price').innerText = product.price + '원';
+            
+            
+                    // ***** order-list X버튼 누르면 해당 목록 사라지게 하기 ***** 
+                    const $cancel = orderListClone.querySelector('.cancel');
+                    
+                    $cancel.addEventListener('click', () => {
+                        orderListClone.remove();
+                        updateTtlAmount(-num);  // 총 수량 해당 목록 수량만큼 감소
+                        updateTtlPrice(-productPrice * num);  // 총 금액 해당 목록 금액만큼 감소
+                    });
+                    
+                    const number = orderListClone.querySelector('.number');
+                    let num = 1;
+            
+                    // # -버튼 누르면 감소하기
+                    const minusBtn = orderListClone.querySelector('.minus-btn');
+                    minusBtn.addEventListener('click', () => {
+                        if (num > 1) {
+                            num--;
+                            number.textContent = num;
+                            updateTtlPrice(-productPrice);
+                            ttlProductPrice();
+                            updateTtlAmount(-1);
+                        } else {
+                            orderListClone.remove();
+                            updateTtlAmount(-num);
+                            updateTtlPrice(-productPrice * num);
+                        }
+                    });
+            
+                    // # +버튼 누르면 증가하기
+                    const plusBtn = orderListClone.querySelector('.plus-btn');
+                    plusBtn.addEventListener('click', () => {
+                        num++;
+                        number.textContent = num;
+                        updateTtlAmount(1);
+                        updateTtlPrice(productPrice);
+                        ttlProductPrice();
+                    });
+            
+                    // 메뉴 가격 계산 함수
+                    function ttlProductPrice() {
+                        const totalPrice = num * productPrice;
+                        orderListClone.querySelector('.price').textContent = totalPrice.toLocaleString() + '원';
+                    }
+                    
+                    // # 총 수량/금액 첫 번째 값
+                    updateTtlAmount(1);
+                    updateTtlPrice(productPrice);
+            
+                    orderInfoContent.appendChild(orderListClone);
+            
+                // ***** 취소 버튼 누르면 초기화 *****
+                const cancelBtn = document.querySelector('.btn-box .cancel-btn');
+                cancelBtn.addEventListener('click', () => {
+                    resetTtl();
+                    orderListClone.remove();
+                });
+            }
         }
+
+        
+
+        // ***** 총 수량 증가/감소 함수 ***** 
+        const ttlAmount = document.querySelector('.ttl-amount');
+        let ttlNum = 0;
+        
+        function updateTtlAmount(change) {
+            ttlNum += change;
+            ttlAmount.textContent = ttlNum + '개';
+        }
+
+        // ***** 총 금액 증가/감소 함수 ***** 
+        const totalPrice = document.querySelector('.ttl-price');
+        let ttlPrice = 0;
+
+        function updateTtlPrice(change) {
+            ttlPrice += change;
+            totalPrice.textContent = ttlPrice.toLocaleString() + '원';  // toLocaleString() => 천 단위에 , 삽입하여 입력
+        }
+        
+        // ***** 취소 버튼 누르면 총 수량/금액 초기화 함수 *****
+        function resetTtl() {
+            ttlNum = 0;
+            ttlPrice = 0;
+            ttlAmount.textContent = ttlNum + '개';
+            totalPrice.textContent = ttlPrice + '원';
+        }
+
         // 초기 값 : coffee로 설정
         showSubMenu('coffee');
     })
