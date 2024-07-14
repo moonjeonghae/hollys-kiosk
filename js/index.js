@@ -1,4 +1,9 @@
 window.onload = function() {
+    // ***** logo 클릭 시 화면 초기화 *****
+    const logo = document.querySelector('.logo img');
+
+    logo.addEventListener('click', () => window.location.href = 'index.html');
+
     // ***** gnb 클릭 시 해당 텍스트로 타이틀 변경 *****
     const mainMenuTitles = document.querySelectorAll('.gnb a');
     const $title = document.querySelector('.kiosk-content > .title');
@@ -113,78 +118,91 @@ window.onload = function() {
 
             // ***** 메뉴 클릭 시 선택 목록에 나타나게 하기 ***** 
             function addToOrderList(product) {
-                const orderList = document.querySelector('.order-list');
                 const orderInfoContent = document.querySelector('.order-info-content');
-                const productPrice = parseInt(product.price.replace(/,/g, ''));
+                const orderList = document.querySelector('.order-list');
                 const orderListClone = orderList.cloneNode(true);
+                const productPrice = parseInt(product.price.replace(/,/g, ''));
+                
+                // # 이미 존재하는 주문인지 확인
+                let existingOrder = Array.from(orderInfoContent.children).find(
+                    order => order.querySelector('.product').textContent === product.name
+                );
             
-                // ***** 동일한 메뉴 클릭하면 수량 증가 시키기 *****
-                    // 새로운 메뉴 추가
+                if (existingOrder) {
+                    // # 이미 존재하는 주문이면 수량만 증가
+                    const number = existingOrder.querySelector('.number');
+                    let num = parseInt(number.textContent);
+                    num++;
+                    number.textContent = num;
+                    updateTtlAmount(1);
+                    updateTtlPrice(productPrice);
+                    ttlProductPrice(existingOrder, num, productPrice);
+                } else {
+                    
                     orderListClone.style.display = 'block';
                     orderListClone.style.display = 'flex';
-                    orderListClone.querySelector('.order-list .product').innerText = product.name;
-                    orderListClone.querySelector('.order-list .price').innerText = product.price + '원';
+                    orderListClone.querySelector('.product').textContent = product.name;
+                    orderListClone.querySelector('.price').textContent = product.price + '원';
             
-            
-                    // ***** order-list X버튼 누르면 해당 목록 사라지게 하기 ***** 
                     const $cancel = orderListClone.querySelector('.cancel');
-                    
-                    $cancel.addEventListener('click', () => {
-                        orderListClone.remove();
-                        updateTtlAmount(-num);  // 총 수량 해당 목록 수량만큼 감소
-                        updateTtlPrice(-productPrice * num);  // 총 금액 해당 목록 금액만큼 감소
-                    });
-                    
                     const number = orderListClone.querySelector('.number');
-                    let num = 1;
             
-                    // # -버튼 누르면 감소하기
-                    const minusBtn = orderListClone.querySelector('.minus-btn');
-                    minusBtn.addEventListener('click', () => {
-                        if (num > 1) {
-                            num--;
-                            number.textContent = num;
-                            updateTtlPrice(-productPrice);
-                            ttlProductPrice();
-                            updateTtlAmount(-1);
-                        } else {
-                            orderListClone.remove();
-                            updateTtlAmount(-num);
-                            updateTtlPrice(-productPrice * num);
-                        }
+                    $cancel.addEventListener('click', () => {
+                        const currentNum = parseInt(number.textContent);
+                        orderListClone.remove();
+                        updateTtlAmount(-currentNum);
+                        updateTtlPrice(-productPrice * currentNum);
                     });
             
-                    // # +버튼 누르면 증가하기
-                    const plusBtn = orderListClone.querySelector('.plus-btn');
-                    plusBtn.addEventListener('click', () => {
-                        num++;
-                        number.textContent = num;
-                        updateTtlAmount(1);
-                        updateTtlPrice(productPrice);
-                        ttlProductPrice();
-                    });
-            
-                    // 메뉴 가격 계산 함수
-                    function ttlProductPrice() {
-                        const totalPrice = num * productPrice;
-                        orderListClone.querySelector('.price').textContent = totalPrice.toLocaleString() + '원';
-                    }
-                    
-                    // # 총 수량/금액 첫 번째 값
                     updateTtlAmount(1);
                     updateTtlPrice(productPrice);
             
                     orderInfoContent.appendChild(orderListClone);
+                    existingOrder = orderListClone;
+                }
             
+                // ***** 메뉴 가격 계산 함수 ***** 
+                function ttlProductPrice(orderElement, num, productPrice) {
+                    const totalPrice = num * productPrice;
+                    orderElement.querySelector('.price').textContent = totalPrice.toLocaleString() + '원';
+                }
+            
+                const plusBtn = existingOrder.querySelector('.plus-btn');
+                const minusBtn = existingOrder.querySelector('.minus-btn');
+                const number = existingOrder.querySelector('.number');
+                let num = parseInt(number.textContent);
+            
+                plusBtn.onclick = () => {
+                    num++;
+                    number.textContent = num;
+                    updateTtlAmount(1);
+                    updateTtlPrice(productPrice);
+                    ttlProductPrice(existingOrder, num, productPrice);
+                };
+            
+                minusBtn.onclick = () => {
+                    if (num > 1) {
+                        num--;
+                        number.textContent = num;
+                        updateTtlPrice(-productPrice);
+                        ttlProductPrice(existingOrder, num, productPrice);
+                        updateTtlAmount(-1);
+                    } else {
+                        existingOrder.remove();
+                        updateTtlAmount(-num);
+                        updateTtlPrice(-productPrice * num);
+                    }
+                };
+
                 // ***** 취소 버튼 누르면 초기화 *****
                 const cancelBtn = document.querySelector('.btn-box .cancel-btn');
+
                 cancelBtn.addEventListener('click', () => {
                     resetTtl();
                     orderListClone.remove();
                 });
             }
         }
-
         
 
         // ***** 총 수량 증가/감소 함수 ***** 
@@ -220,4 +238,12 @@ window.onload = function() {
         console.log('통신 에러 : ' + error);
     });
 
+
+    // ***** 주문하기 버튼 누르면 모달창 띄우기 & 뒤로가기 버튼 실행 *****
+    const orderBtn = document.querySelector('.order-btn');
+    const modal = document.querySelector('.order-modal');
+    const backBtn = document.querySelector('.back');
+
+    orderBtn.addEventListener('click', () => modal.style.display = 'block');
+    backBtn.addEventListener('click', () => modal.style.display = 'none');
  }
