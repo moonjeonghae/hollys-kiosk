@@ -38,7 +38,7 @@ window.onload = function() {
 
 
     // ***** subtitle & 해당 메뉴 *****
-    axios.get('./data/test.json')
+    axios.get('./data/product.json')
     .then(result => {
         const menuData = result.data;
         console.log(menuData);
