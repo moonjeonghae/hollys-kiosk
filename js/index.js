@@ -244,6 +244,15 @@ window.onload = function() {
     const modal = document.querySelector('.order-modal');
     const backBtn = document.querySelector('.back');
 
-    orderBtn.addEventListener('click', () => modal.style.display = 'block');
+    orderBtn.addEventListener('click', () => {
+        // const orderList = document.querySelector('.order-list');
+        const orderInfoContent = document.querySelector('.order-info-content');
+
+        if (orderInfoContent.children.length === 1) {  // 안 보이는 템플릿이 있기 때문에 length 1
+            alert('제품을 선택하세요');
+        } else {
+            modal.style.display = 'block';
+        }
+    });
     backBtn.addEventListener('click', () => modal.style.display = 'none');
  }
