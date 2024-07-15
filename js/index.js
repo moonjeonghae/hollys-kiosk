@@ -142,6 +142,7 @@ window.onload = function() {
                     orderListClone.style.display = 'block';
                     orderListClone.style.display = 'flex';
                     orderListClone.querySelector('.product').textContent = product.name;
+                    orderListClone.querySelector('.number').textContent = 1;
                     orderListClone.querySelector('.price').textContent = product.price + '원';
             
                     const $cancel = orderListClone.querySelector('.cancel');
@@ -201,6 +202,8 @@ window.onload = function() {
                     resetTtl();
                     orderListClone.remove();
                 });
+
+                updateFinalOrderChk();
             }
         }
         
@@ -242,7 +245,7 @@ window.onload = function() {
     // ***** 주문하기 버튼 누르면 모달창 띄우기 & 뒤로가기 버튼 실행 *****
     const orderBtn = document.querySelector('.order-btn');
     const modal = document.querySelector('.order-modal');
-    const backBtn = document.querySelector('.back');
+    const backBtns = document.querySelectorAll('.back');
 
     orderBtn.addEventListener('click', () => {
         // const orderList = document.querySelector('.order-list');
@@ -252,7 +255,108 @@ window.onload = function() {
             alert('제품을 선택하세요');
         } else {
             modal.style.display = 'block';
+            updateFinalOrderChk();
         }
     });
-    backBtn.addEventListener('click', () => modal.style.display = 'none');
+    backBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            calcModal.style.display = 'none';
+        });
+    });
+
+    // ***** 주문 방법 선택하면 결제창으로 넘어가기 *****
+    const orderMethodBtns = document.querySelectorAll('.modal-btn button');
+    const calcModal = document.querySelector('.calc');
+
+    orderMethodBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            calcModal.style.display = 'grid';
+        });
+    });
+
+    // ***** 결제창 관련 *****
+    function updateFinalOrderChk() {
+        const finalOrderChk = document.querySelector('.final-order-check');
+        const orderlists = document.querySelectorAll('.order-info-content .order-list');
+        finalOrderChk.innerHTML = '';
+
+        orderlists.forEach((list, idx) => {
+            if (idx === 0) return;
+
+            if(list.style.display !== 'none') {
+                const finalOrderListDiv = document.createElement('div');
+                finalOrderListDiv.className = 'final-order-list';
+    
+                const productName = list.querySelector('.product').textContent;
+                const productAmount = list.querySelector('.number').textContent;
+                const productPrice = list.querySelector('.price').textContent;
+    
+                finalOrderListDiv.innerHTML = `
+                    <div class="product">${productName}</div>
+                    <div class="amount">${productAmount}</div>
+                    <div class="price">${productPrice}</div>
+                `;
+
+                finalOrderChk.appendChild(finalOrderListDiv);
+            }
+        });
+
+        const totalPrice = document.querySelector('.ttl-price');
+        const payPrice = document.querySelector('.pay-price');
+
+        function updateFinalPrice() {
+            const finalTotalPrice = document.querySelector('.total-price');
+    
+            finalTotalPrice.innerText = totalPrice.innerText;
+        }
+        updateFinalPrice();
+        
+        let currentPayPrice = 0;
+
+        function updatePayPrice() {
+            const buttons = document.querySelectorAll('.pay-method-btn button');
+    
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const addToPrice = parseInt(btn.getAttribute('data-price').replace(',', ''));
+                    currentPayPrice += addToPrice;
+                    
+                    payPrice.textContent = currentPayPrice.toLocaleString() + '원';
+                });
+            });
+        }
+        
+        const resetMethodBtn = document.querySelector('.method-reset button');
+        
+        resetMethodBtn.addEventListener('click', () => {
+            payPrice.textContent = '0원';
+            changeMoney.textContent = '0원';
+            currentPayPrice = 0;
+        });
+
+        updatePayPrice();
+    }
+
+    const payBtn = document.querySelector('.pay-btn button');
+    const changeMoney = document.querySelector('.change-money');
+    const totalPrice = document.querySelector('.ttl-price');
+    const payPrice = document.querySelector('.pay-price');
+    
+    payBtn.addEventListener('click', () => {
+        changeCalc();
+    });
+
+    function changeCalc() {
+
+        const ttl = parseInt(totalPrice.textContent.replace('원', '').replace(',', ''));
+        const pay = parseInt(payPrice.textContent.replace('원', '').replace(',', ''));
+        
+        const change = pay -ttl;
+        changeMoney.textContent = change.toLocaleString() + '원'; 
+        
+        if(ttl > pay) {
+            alert('금액이 부족합니다.');
+        }
+    }
  }

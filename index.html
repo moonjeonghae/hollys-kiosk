@@ -63,7 +63,7 @@
                         <div class="product"></div>
                         <div class="amount">
                             <button class="minus-btn">-</button>
-                            <p class="number">1</p>
+                            <p class="number"></p>
                             <button class="plus-btn">+</button>
                         </div>
                         <div class="price"></div>
@@ -108,6 +108,42 @@
                                 <b>포장하기</b>
                             </button>
                         </div>
+                    </div>
+
+                    <div class="calc">
+                        <img src="./images/back.png" alt="back botton" class="back">
+                        <div class="calc-main">
+                           <div class="final-order-check"></div>
+                           <div class="price">
+                                <div class="total">
+                                    <p class="calc-modal-txt">총 결제 금액</p>
+                                    <p class="total-price">0원</p>
+                                </div>
+                                <div class="pay">
+                                    <p class="calc-modal-txt">지불할 금액</p>
+                                    <p class="pay-price">0원</p>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="pay-method">
+                            <strong>지불 금액 선택</strong>
+                            <div class="pay-method-btn">
+                                <button class="fifty-thousands" data-price="50,000">+50,000원</button>
+                                <button class="ten-thousands" data-price="10,000">+10,000원</button>
+                                <button class="five-thousands" data-price="5,000">+5,000원</button>
+                                <button class="one-thousand" data-price="1,000">+1,000원</button>
+                                <div class="hundrend">
+                                    <button class="five" data-price="500">+500원</button>
+                                    <button class="one" data-price="100">+100원</button>
+                                </div>
+                            </div>
+                            <div class="method-reset"><button>초기화</button></div>
+                        </div>
+                        <div class="change">
+                            <p class="calc-modal-txt">거스름돈</p>
+                            <p class="change-money">0원</p>
+                        </div>
+                        <div class="pay-btn"><button><b>결제하기</b></button></div>
                     </div>
                 </div>
             </section>
