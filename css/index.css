@@ -4,10 +4,7 @@
     grid-template-columns: repeat(1fr, 2);
     grid-auto-rows: minmax(50px, auto);
     width: 100%;
-    /* max-width: 1800px; */
     margin: 0 auto;
-    /* padding: 0 10px; */
-    /* background-color: lightblue; */
 }
 
 /******************** header ********************/
@@ -15,7 +12,6 @@ header {
     width: 250px;
     padding-left: 70px;  /* 왼쪽 마진 대체 */
     border-right: 1px solid #4f4c4b;
-    /* background-color: lightcyan; */
 }
 
 .logo-mainmenu {
@@ -35,7 +31,6 @@ header {
     margin: 0;
     margin-top: 40px;
     cursor: pointer;
-    /* background-color: antiquewhite; */
 }
 
 .main-menu {
@@ -45,7 +40,6 @@ header {
 .main-menu > .gnb {
     width: 100%;
     margin-top: 75px;
-    /* background-color: lightgreen; */
 }
 
 .main-menu > .gnb > li {
@@ -73,15 +67,10 @@ header {
 /******************** main ********************/
 main {
     width: 100%;
-    /* background-color: lightgoldenrodyellow; */
 }
 
 
 /* ===== kiosk-content ===== */
-/* .kiosk-content {
-   
-} */
-
 .kiosk-content > .title {
     margin-top: 40px;
     margin-left: 20px;
@@ -90,7 +79,6 @@ main {
 .kiosk-content > .submenu-title-content {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
     margin: 0;
 }
 .kiosk-content .sub-title {
@@ -100,7 +88,6 @@ main {
 .kiosk-content .sub-title > ul {
     display: flex;
     justify-content: flex-start;
-    /* background-color: lightblue; */
 }
 
 .kiosk-content .sub-title > ul > li {
@@ -113,7 +100,6 @@ main {
     font-size: 1.167rem;
     text-align: center;
     cursor: pointer;
-    /* background-color: #ba000d; */
 }
 
 .kiosk-content .sub-title > ul > .selected {
@@ -202,7 +188,6 @@ main {
     align-items: center;
     padding: 6px 38px;
     border-bottom: 1px solid #ccc;
-    /* background-color: lightgreen; */
 }
 .kiosk-order-info .order-info-content::-webkit-scrollbar {
     width: 10px;
@@ -224,9 +209,8 @@ main {
 }
 
 .kiosk-order-info .order-list > .product {
-    margin-right: 535px; 
-    width: 330px; 
-    /* background-color: lightblue; */
+    margin-right: 525px; 
+    width: 340px; 
 }
 
 .kiosk-order-info .order-list > .amount {
@@ -234,7 +218,6 @@ main {
     align-items: center;
     width: 97px;  
     margin-right: 140px; 
-    /* background-color: lightblue; */
 }
 
 .kiosk-order-info .order-list > .amount > button {
@@ -249,7 +232,6 @@ main {
 
 .kiosk-order-info .order-list .price {
     width: 100px;
-    /* background-color: lightblue; */
 }
 
 .kiosk-order-info .order-list > .cancel {
@@ -258,7 +240,6 @@ main {
     margin-left: 25px;
     transform: translateY(2px);
     cursor: pointer;
-    /* background-color: bisque; */
 }
 
 .kiosk-order-info .order-list > .cancel > .x {
@@ -280,7 +261,6 @@ main {
 .kiosk-order-info > .ttlcontent-button {
     height: 100%;
     padding: 20px 70px;  /* padding-right 부분 => 오른쪽 마진 대체 */
-    /* background-color: lightcyan; */
 }
 
 /* ----- ttlcontent-button > ttl-content ----- */
@@ -307,7 +287,6 @@ main {
     width: 100%;
     height: 70px;
     margin-top: 10px;
-    /* background-color: antiquewhite; */
 }
 
 .kiosk-order-info .btn-box > button {
@@ -401,7 +380,6 @@ main {
     width: 300px;
     height: 300px;
     font-size: 1.5rem;
-    /* border-style: none; */
     border: 2px solid #4f4c4b;
     border-radius: 15px;
     cursor: pointer;
@@ -478,20 +456,16 @@ main {
 .order-modal > .calc > .calc-main .final-order-list > .product {
     width: 300px;
     padding-left: 8px;
-    /* background-color: lightblue; */
 }
 
 .order-modal > .calc > .calc-main .final-order-list > .amount {
-    /* width: 20px; */
     margin-right: 40px;
     text-align: center;
-    /* background-color: lightcoral; */
 }
 
 .order-modal > .calc > .calc-main > .price {
     width: 100%;
     height: 80px;
-    /* background-color: lightcyan; */
 }
 
 .order-modal > .calc > .calc-main > .price > .total,
