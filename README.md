@@ -1,5 +1,5 @@
 # 🥤 HOLLYS KIOSK
-<img src="./images/hollys-kiosk.gif" alt="hollys-kiosk" width="100%">
+<video src="./video/hollys-kiosk.mp4" autoplay loop muted controlsList="nodownload"></video>
 
 ## 📢 About
 📆 제작 기간 : 2024.07.03 ~ 2024.07.13 <br>
