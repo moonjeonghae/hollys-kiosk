@@ -1,5 +1,7 @@
 # 🥤 HOLLYS KIOSK
-<video src="./video/hollys-kiosk.mp4" autoplay loop muted controlsList="nodownload"></video>
+https://github.com/user-attachments/assets/8bb36e5a-fa82-498f-aa87-ac6a60b905d1
+
+
 
 ## 📢 About
 📆 제작 기간 : 2024.07.03 ~ 2024.07.13 <br>
