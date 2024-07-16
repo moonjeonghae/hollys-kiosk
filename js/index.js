@@ -258,10 +258,12 @@ window.onload = function() {
             updateFinalOrderChk();
         }
     });
+
     backBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             modal.style.display = 'none';
             calcModal.style.display = 'none';
+            resetFinalPrice();
         });
     });
 
@@ -302,61 +304,76 @@ window.onload = function() {
             }
         });
 
-        const totalPrice = document.querySelector('.ttl-price');
-        const payPrice = document.querySelector('.pay-price');
-
-        function updateFinalPrice() {
-            const finalTotalPrice = document.querySelector('.total-price');
-    
-            finalTotalPrice.innerText = totalPrice.innerText;
-        }
         updateFinalPrice();
-        
-        let currentPayPrice = 0;
 
-        function updatePayPrice() {
-            const buttons = document.querySelectorAll('.pay-method-btn button');
+    }
+
+    const totalPrice = document.querySelector('.ttl-price');
+    const payPrice = document.querySelector('.pay-price');
+
+    function updateFinalPrice() {
+        const finalTotalPrice = document.querySelector('.total-price');
+        const totalPrice = document.querySelector('.ttl-price');
+
+        finalTotalPrice.innerText = totalPrice.innerText;
+    }
     
-            buttons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const addToPrice = parseInt(btn.getAttribute('data-price').replace(',', ''));
-                    currentPayPrice += addToPrice;
-                    
-                    payPrice.textContent = currentPayPrice.toLocaleString() + '원';
-                });
+    let currentPayPrice = 0;
+
+    function updatePayPrice() {
+        const buttons = document.querySelectorAll('.pay-method-btn button');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const addToPrice = parseInt(btn.getAttribute('data-price').replace(',', ''));
+                currentPayPrice += addToPrice;
+                
+                payPrice.textContent = currentPayPrice.toLocaleString() + '원';
             });
-        }
-        
-        const resetMethodBtn = document.querySelector('.method-reset button');
+        });
+    }
+
+    updatePayPrice();
+
+    function resetFinalPrice() {
+        currentPayPrice = 0;
+        payPrice.textContent = '0원';
+        changeMoney.textContent = '0원';
+    }
+
+    const resetMethodBtn = document.querySelector('.method-reset button');
         
         resetMethodBtn.addEventListener('click', () => {
-            payPrice.textContent = '0원';
-            changeMoney.textContent = '0원';
-            currentPayPrice = 0;
+            resetFinalPrice();
         });
-
-        updatePayPrice();
-    }
 
     const payBtn = document.querySelector('.pay-btn button');
     const changeMoney = document.querySelector('.change-money');
-    const totalPrice = document.querySelector('.ttl-price');
-    const payPrice = document.querySelector('.pay-price');
     
     payBtn.addEventListener('click', () => {
         changeCalc();
     });
 
     function changeCalc() {
-
         const ttl = parseInt(totalPrice.textContent.replace('원', '').replace(',', ''));
-        const pay = parseInt(payPrice.textContent.replace('원', '').replace(',', ''));
-        
+        const pay = currentPayPrice;
+
         const change = pay -ttl;
         changeMoney.textContent = change.toLocaleString() + '원'; 
         
         if(ttl > pay) {
-            alert('금액이 부족합니다.');
+            const shortage = Math.abs(change).toLocaleString() + '원';
+            alert(`금액이 부족합니다.\n\n부족한 금액 : ${shortage}`);
+            resetFinalPrice();
+        } else {
+            setTimeout(() => {
+                let lastQuestion = confirm('결제하시겠습니까?');
+
+                if(lastQuestion) {
+                    alert('결제가 완료되었습니다.');
+                    window.location.href = 'index.html';
+                }
+            });
         }
     }
  }

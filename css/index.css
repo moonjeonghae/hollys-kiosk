@@ -532,7 +532,8 @@ main {
 
 }
 
-.order-modal > .calc .pay-method-btn button {
+.order-modal > .calc .pay-method-btn button,
+.order-modal > .calc .method-reset > button {
     height: 33px;
     margin-bottom: 7px;
     border: 1px solid #4f4c4b;
@@ -560,7 +561,7 @@ main {
     width: 100%;
 }
 
-.order-modal > .calc .pay-method-btn > .method-reset > button {
+.order-modal > .calc .method-reset > button {
     width: 100%;
 }
 
