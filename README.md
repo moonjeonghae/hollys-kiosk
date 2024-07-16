@@ -1,5 +1,6 @@
 # 🥤 HOLLYS KIOSK
 <img src="./imagse/hollys-kiosk.gif" alt="hollys-kiosk">
+
 ## 📢 About
 📆 제작 기간 : 2024.07.03 ~ 2024.07.13 <br>
 👤 제작 인원 : 1명
